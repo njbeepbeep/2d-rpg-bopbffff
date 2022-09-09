@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 8679534029092177113}
   - component: {fileID: 8679534029092177112}
   - component: {fileID: 8679534029092177094}
-  - component: {fileID: 8679534029092177095}
+  - component: {fileID: -8035401704103268642}
+  - component: {fileID: -2725377887819199199}
   m_Layer: 11
   m_Name: AmmoObject
   m_TagString: Untagged
@@ -100,7 +101,7 @@ CircleCollider2D:
   m_Offset: {x: 0.0019909143, y: 0}
   serializedVersion: 2
   m_Radius: 0.20199096
---- !u!114 &8679534029092177095
+--- !u!114 &-8035401704103268642
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,3 +114,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageInflicted: 0
+--- !u!114 &-2725377887819199199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8679534029092177115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1869680e73b5d04e9bebf241c8b4366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
