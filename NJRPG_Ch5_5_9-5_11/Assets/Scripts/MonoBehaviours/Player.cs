@@ -60,6 +60,8 @@ public class Player : Character
     {
         while (true)
         {
+            StartCoroutine(FlickerCharacter());
+
             hitPoints.value = hitPoints.value - damage;
 
             if (hitPoints.value <= float.Epsilon)
@@ -93,5 +95,6 @@ public class Player : Character
         healthBar.character = this;
 
         hitPoints.value = startingHitPoints;
+        GetComponent<SpriteRenderer>().color = Color.white;
     }
 }

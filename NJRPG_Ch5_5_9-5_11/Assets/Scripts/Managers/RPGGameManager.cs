@@ -23,6 +23,31 @@ public class RPGGameManager : MonoBehaviour
         }
     }
 
+    public static bool gameIsPaused;
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            gameIsPaused = !gameIsPaused;
+            PauseGame();
+        }
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
+    }
+    void PauseGame()
+    {
+        if (gameIsPaused)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+    }
+
     void Start()
     {
         // Consolidate all the logic to setup a scene inside a single method. 

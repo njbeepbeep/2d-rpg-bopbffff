@@ -17,12 +17,15 @@ public class Enemy : Character
     public override void ResetCharacter()
     {
         hitPoints = startingHitPoints;
+        GetComponent<SpriteRenderer>().color = Color.white;
     }
 
     public override IEnumerator DamageCharacter(int damage, float interval)
     {
         while (true)
         {
+            StartCoroutine(FlickerCharacter());
+
             hitPoints = hitPoints - damage;
 
             if (hitPoints <= float.Epsilon)
@@ -44,11 +47,12 @@ public class Enemy : Character
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        // Because only enemies can only hurt the player
         if (collision.gameObject.CompareTag("Player"))
         {
             Player player = collision.gameObject.GetComponent<Player>();
 
-            // only call DamageCharacter on the player if we don't currently have a DamageCharacter() Coroutine running.
+            // Only call DamageCharacter on the player if we don't currently have a DamageCharacter() Coroutine running.
             if (damageCoroutine == null)
             {
                 damageCoroutine = StartCoroutine(player.DamageCharacter(damageStrength, 1.0f));
