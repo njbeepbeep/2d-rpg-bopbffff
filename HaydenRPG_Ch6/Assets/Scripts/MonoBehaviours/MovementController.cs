@@ -10,7 +10,6 @@ public class MovementController : MonoBehaviour
     // 1
     Animator animator;
 
-    // 2
     
     Rigidbody2D rb2D;
 
@@ -25,11 +24,11 @@ public class MovementController : MonoBehaviour
     {
         if(Mathf.Approximately(movement.x, 0) && Mathf.Approximately(movement.y, 0))
         {
-            animator.SetBool("isWalking:", false);
+            animator.SetBool("isWalking", false);
         }
         else 
         {
-            animator.SetBool("isWalking:", true);
+            animator.SetBool("isWalking", true);
 
         }
         animator.SetFloat("xDir", movement.x);

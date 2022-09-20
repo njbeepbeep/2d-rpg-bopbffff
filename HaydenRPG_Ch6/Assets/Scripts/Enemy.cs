@@ -23,6 +23,8 @@ public class Enemy : Character
     {
         while (true)
         {
+            StartCoroutine(FlickerCharacter());
+
             hitPoints = hitPoints - damage;
 
             if (hitPoints <= float.Epsilon)
