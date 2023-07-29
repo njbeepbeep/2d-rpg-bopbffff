@@ -22,7 +22,14 @@ public class RPGGameManager : MonoBehaviour
             sharedInstance = this;
         }
     }
-
+    private void Update()
+    {
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
+        
+    }
     void Start()
     {
         // Consolidate all the logic to setup a scene inside a single method. 
